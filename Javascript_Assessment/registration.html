@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var usernames = ("srinath",  "sai",      "girish",      "ladsfyj",    "anewdofsffn");
+        
+
+        function validate(){
+ var name1=document.getElementById("userform").value;
+
+ if(name1=="usernames"){
+ for(let i=0;i<usernames.length;i++)
+ document.getElementById("show").innerHTML+=usernames[i];
+ 
+ }
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" method="POST" id="userform">
+        UserName:
+        <input type="name" name="username" maxlength="15" minlength="5" required/><br>
+        PassWord:
+        <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
+        Phone:
+        <input type="number" maxlength="10"  required><br>
+        <input type="submit" value="add" onsubmit="validate()">
+        <div id="show">
+        </div>
+      
+        
+        
+    </form>
+</body>
+</html>
